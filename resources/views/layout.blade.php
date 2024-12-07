@@ -33,7 +33,7 @@
                     <!-- The sidebar -->
                     <div class="sidebar">
                         <a class="active" href="#home">Home</a>
-                        <a href="#news">Student</a>
+                        <a href="{{ route('students.index') }}">Student</a>
                         <a href="#contact">Teacher</a>
                         <a href="#contact">Courses</a>
                         <a href="#about">Enrollment</a>
