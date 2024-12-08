@@ -34,7 +34,7 @@
                     <div class="sidebar">
                         <a class="active" href="#home">Home</a>
                         <a href="{{ route('students.index') }}">Student</a>
-                        <a href="#contact">Teacher</a>
+                        <a href="{{ route('teachers.index') }}">Teacher</a>
                         <a href="#contact">Courses</a>
                         <a href="#about">Enrollment</a>
                         <a href="#about">Payment</a>
