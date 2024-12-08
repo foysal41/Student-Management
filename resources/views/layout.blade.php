@@ -36,6 +36,7 @@
                         <a href="{{ route('students.index') }}">Student</a>
                         <a href="{{ route('teachers.index') }}">Teacher</a>
                         <a href="{{ route('courses.index') }}">Courses</a>
+                        <a href="{{ route('batches.index') }}">Batches</a>
                         <a href="#about">Enrollment</a>
                         <a href="#about">Payment</a>
                     </div>
