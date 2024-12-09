@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Batch;
+use App\Models\Course;
 
 
 class BatchController extends Controller
@@ -14,7 +15,6 @@ class BatchController extends Controller
     public function index()
     {
         $batches = Batch::all();
-
         return view('batches.index')->with('batches', $batches);
     }
 
@@ -23,7 +23,17 @@ class BatchController extends Controller
      */
     public function create()
     {
-        return view('batches.create');
+        $courses = Course::pluck('name', 'id');
+        return view('batches.create', compact('courses'));
+
+        /*
+
+        1. pluck ব্যবহার করে আপনি Course মডেল থেকে id ও name নিয়ে আসছেন।
+        2. তারপর, সেই courses ডেটাকে batches.create ভিউতে পাঠাচ্ছেন।
+
+        3. ভিউ ফাইলে, আপনি এই courses ডেটা দিয়ে ড্রপডাউন তৈরি করছেন, যাতে ব্যবহারকারী একটি কোর্স নির্বাচন করতে পারে।
+
+        */
     }
 
     /**
@@ -42,7 +52,7 @@ class BatchController extends Controller
     public function show(string $id)
     {
         $batches = Batch::find($id);
-        return view('batches.show')->with('batches' , $batches);
+        return view('batches.show')->with('batches', $batches);
     }
 
     /**
