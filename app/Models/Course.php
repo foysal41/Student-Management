@@ -13,4 +13,13 @@ class Course extends Model
     protected $primaryKey = 'id';
     protected $fillable = ['name', 'syllabus' , 'duration'];
     use HasFactory;
+
+
+    public function duration(){
+        return $this->duration. " Months";
+    }
+
+    // এই course model এর duration function ta আমরা ব্যবহার করবো view> course > index.php moddhe <td>{{ $item->duration() }}</td>  এবং show.php moddhe
+
+
 }

@@ -21,6 +21,8 @@ class Batch extends Model
 
 
     //Batch মডেলে belongsTo(Course::class) ব্যবহার করলে, Batch মডেল জানবে যে এটি একটি Course এর অংশ, এবং Course মডেলটি hasMany(Batch::class) ব্যবহার করে একাধিক Batch ধারণ করতে পারবে।
+
+    // এর পর batch controller এর  মদ্ধে create() এ কাজ করতে হবে। 
 }
 
 

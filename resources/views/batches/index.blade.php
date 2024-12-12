@@ -29,7 +29,8 @@
                         <tr>
                             <td>{{ $loop->iteration }}</td>
                             <td>{{ $item->name }}</td>
-                            <td>{{ $item->course_id }}</td>
+                            <td>{{ $item->course->name }}</td>
+                            {{-- এখানে batch model জানে তার course নামে রিলেশন আছে তার $item->course->name --}}
                             <td>{{ $item->start_date }}</td>
                             <td>
                                 <a href="{{ url('/batches/' . $item->id) }}" title="View Batches">

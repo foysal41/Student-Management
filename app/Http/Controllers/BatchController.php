@@ -23,6 +23,8 @@ class BatchController extends Controller
      */
     public function create()
     {
+        //return view ('batches.create');
+
         $courses = Course::pluck('name', 'id');
         return view('batches.create', compact('courses'));
 
@@ -33,7 +35,11 @@ class BatchController extends Controller
 
         3. ভিউ ফাইলে, আপনি এই courses ডেটা দিয়ে ড্রপডাউন তৈরি করছেন, যাতে ব্যবহারকারী একটি কোর্স নির্বাচন করতে পারে।
 
+        4. display করার জন্য view>batch>creta.php মদ্ধে পাঠিয়ে দিবো
+
         */
+
+
     }
 
     /**
