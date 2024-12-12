@@ -38,7 +38,7 @@
                         <a href="{{ route('courses.index') }}">Courses</a>
                         <a href="{{ route('batches.index') }}">Batches</a>
                         <a href="{{ route('enrollments.index') }}">Enrollment</a>
-                        <a href="#about">Payment</a>
+                        <a href="{{ route('payments.index') }}">Payment</a>
                     </div>
 
 
