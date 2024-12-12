@@ -6,7 +6,10 @@ use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\Enrollment;
+use App\Models\Batch;
+use App\Models\Student;
 use Illuminate\View\View;
+
 
 class EnrollmentController extends Controller
 {
@@ -23,8 +26,13 @@ class EnrollmentController extends Controller
      * Show the form for creating a new resource.
      */
     public function create() : View
+
     {
-        return view('enrollments.create');
+        $batches = Batch::pluck('name', 'id');
+        $students = Student::pluck('name', 'id');
+        return view('enrollments.create', compact('batches', 'students'));
+
+        /*return view('enrollments.create');*/
     }
 
     /**
@@ -50,9 +58,15 @@ class EnrollmentController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(string $id) : View
+
+
     {
+
+
+
         $enrollments = Enrollment::find($id);
         return view('enrollments.edit')->with('enrollments', $enrollments);
+
     }
 
     /**
